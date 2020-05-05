@@ -1,0 +1,25 @@
+{
+  "extends": [
+    "react-app",
+    "prettier"
+  ],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "ecmaFeatures": {
+        "jsx": true
+    }
+},
+  "rules": {
+    "jsx-quotes": [
+      1,
+      "prefer-double"
+    ],
+    "eol-last": [
+      2,
+      "always"
+    ]
+  },
+  "plugins": [
+    "prettier"
+  ]
+}
