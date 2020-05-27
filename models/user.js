@@ -27,9 +27,12 @@ const userSchema = new Schema({
     type: Boolean,
     default: false,
   },
+  isConfirmed: {
+    type: Boolean,
+    default: false,
+  },
 });
 
-//TODO: Use environmental variables to get the key
 userSchema.methods.generateAuthToken = function () {
   const token = jwt.sign(
     {
@@ -37,8 +40,9 @@ userSchema.methods.generateAuthToken = function () {
       name: this.name,
       email: this.email,
       isAdmin: this.isAdmin,
+      isConfirmed: this.isConfirmed,
     },
-    config.get(jwtPrivateKey)
+    config.get('jwtPrivateKey')
   );
   return token;
 };
@@ -55,4 +59,4 @@ const validateUser = (user) => {
 };
 
 const User = mongoose.model('User', userSchema);
-module.exports = { User, validateUser, schema: joiSchema };
+module.exports = { User, validateUser, userSchema: joiSchema };

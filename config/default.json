@@ -1,5 +1,5 @@
 {
     "jwtPrivateKey": "localhostKey",
     "db": "mongodb://localhost/predicatecloud",
-    "port": "3900"
+    "hashCycles": 10
 }

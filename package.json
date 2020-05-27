@@ -17,11 +17,15 @@
   },
   "homepage": "https://github.com/HardenedHunter/predicatecloud-backend#readme",
   "dependencies": {
+    "bcrypt": "^4.0.1",
     "config": "^3.3.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
+    "helmet": "^3.22.0",
     "joi": "^14.3.1",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.9.12",
+    "lodash": "^4.17.15",
+    "mongoose": "^5.9.16",
     "stylelint-config-standard": "^20.0.0"
   }
 }

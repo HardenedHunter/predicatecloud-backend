@@ -1,17 +1,14 @@
 const express = require('express');
-const config = require('config');
 const app = express();
 
-// require("./startup/logging")();
-// require("./startup/cors")(app);
-// require("./startup/routes")(app);
-// require("./startup/db")();
-// require("./startup/config")();
-// require("./startup/validation")();
+require('./startup/cors')(app);
+require('./startup/routes')(app);
+require('./startup/db')();
+require('./startup/config')();
 
-const port = process.env.PORT || config.get('port');
+const port = process.env.PORT || 9000;
 const server = app.listen(port, () =>
-  console.log(`Listening on port ${port}...`)
+  console.log(`Listening on port ${port}.`)
 );
 
 module.exports = server;
