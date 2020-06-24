@@ -1,3 +1,4 @@
 {
-    "jwtPrivateKey": "predicatecloud_jwtPrivateKey"
+    "jwtPrivateKey": "predicatecloud_jwtPrivateKey",
+    "db": "predicatecloud_db"
 }
