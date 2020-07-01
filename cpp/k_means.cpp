@@ -1,4 +1,5 @@
 #include "k_means.h"
+#include <cmath>
 #include <ctime>
 #include <algorithm>
 #include <utility>
