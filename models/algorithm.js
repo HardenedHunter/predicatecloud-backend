@@ -4,6 +4,7 @@ const kmeansSchema = {
   algorithm: Joi.number().required(),
   data: {
     dimensions: Joi.number().min(1),
+    clusters: Joi.number().min(1),
     values: Joi.array()
       .items(
         Joi.array()

@@ -15,16 +15,16 @@ router.post('/', [auth], async (req, res) => {
   if (error) return res.status(400).send(error.details[0].message);
 
   const { algorithm, data } = req.body;
-  const { dimensions, values } = data;
+  const { clusters, values } = data;
 
   let result = [];
   try {
-    result = algorithms[algorithm](values, dimensions);
+    result = algorithms[algorithm](values, clusters);
   } catch (error) {
-    return res.status(400).send('Something bad just happened.');
+    return res.status(400).send('Something bad happened.');
   }
 
-  res.send(result);
+  res.send({ result });
 });
 
 module.exports = router;
