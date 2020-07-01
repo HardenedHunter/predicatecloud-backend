@@ -7,5 +7,10 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true,
     "source.fixAll.stylelint": true
+  },
+  "files.associations": {
+    "vector": "cpp",
+    "xutility": "cpp",
+    "functional": "cpp"
   }
 }

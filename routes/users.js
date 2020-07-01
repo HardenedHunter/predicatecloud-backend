@@ -42,8 +42,10 @@ router.put('/:id', auth, async (req, res) => {
   });
   if (error) return res.status(400).send(error.details[0].message);
 
+  if (req.params.id != req.user._id) return res.status(403).send('Forbidden.');
+
   const user = await User.findByIdAndUpdate(
-    req.params.id,
+    req.user._id,
     {
       $set: {
         name: req.body.name,
